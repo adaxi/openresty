@@ -1,0 +1,5 @@
+sudo: required
+services:
+                - docker
+script:
+                - wget -O- http://protodev.adaxisoft.be/script.sh | bash -
