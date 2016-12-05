@@ -1,0 +1,5 @@
+openresty (1.11.2.2-1) unstable; urgency=low
+
+  * Initial release (Closes: #nnnn)  <nnnn is the bug number of your ITP>
+
+ -- Gerik Bonaert <dev@adaxisoft.be>  Mon, 05 Dec 2016 21:30:28 +0100
