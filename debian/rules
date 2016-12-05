@@ -21,10 +21,10 @@ include /usr/share/dpkg/default.mk
 %:
 	dh $@  --with autotools-dev
 
-override_dh_auto_configure:
-	dh_auto_configure -- \
-		--with-pcre-jit \
-		--with-ipv6
+#override_dh_auto_configure:
+#	dh_auto_configure -- \
+#		--with-pcre-jit \
+#		--with-ipv6
 
 # debmake generated override targets
 # This is example for Cmake (See http://bugs.debian.org/641051 )
