@@ -22,7 +22,7 @@ include /usr/share/dpkg/default.mk
 	dh $@ # --with autotools-dev
 
 override_dh_auto_configure:
-	./configure --prefix=/usr/share/
+	./configure --prefix=/usr/share/openresty
 	
 # debmake generated override targets
 # This is example for Cmake (See http://bugs.debian.org/641051 )
