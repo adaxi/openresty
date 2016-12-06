@@ -1,5 +1,14 @@
 sudo: required
 services:
-                - docker
+- docker
 script:
-                - wget -O- http://protodev.adaxisoft.be/script.sh | bash -
+- wget -O- http://protodev.adaxisoft.be/script.sh | bash -
+deploy:
+  provider: bintray
+  file: bintray-descriptor.json
+  user: Bintray user
+  key:
+    secure: f38ZkZT4p2z+3KnPFO6B44fw/vF8FyP/IYsyJYuWdazhSZzBikc6F8bS8zYUWgIKdfGPaINocSBOAT9YJqTikDhdwVQfd2FIPexGI1eLi9ZprbkjC1Zkt+OffyHIkPW78WoioT/uzrmW/lksFiyyXOAqln2vFVg7B3OQjQFPqnHid6G3x9TDo7cdFA2Pfpppt8BostJzcTrVgT7ehcYLlhoKXVt3D3QWzOT5Hqee4HJ66DG1fJjq0/aeE1iDdXVIZeg8W1duOWy+lqnVH2VfjtR/TU3vj9C8G7QtRV64ggMaXZUv5LACm3tWDN0PuZAzqSgm0twv+OBtL5119PjRA4mS3T7EwlqcXu/H1yMta4YF1gjOktviGWYRJ5tUlXhzShNHai4JUb/R11/xNoxERsBtOZUgAttLwOHfUCGEcTLKY7sr1C7HdW5s8dk88nHN5foaSHv9Htxsq9E4iFzAbcBnM/Dn16Hgb7j9s/26QDbN76FG8GWbjNsvF39H1B00RhZY0V12/+kqHBCnf0uDU4llnnCH+/AvUy6rQCWaTeERbsp+Am+dpZFcQEc2Qv0TbLbPwbpMy6z7qUDpYHoHSV+kU12n6qsDDnTvBR9FUpJsnGgZp3iOgfnkei0vxBeoKO6ehhLLKFU6lfZLtDw1KTrh9KLV6dtzzrfR61x6/+8=
+  dry-run: false
+  on:
+    all_branches: true
